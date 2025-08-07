@@ -71,21 +71,6 @@ go-mithril/
    KAFKA_BROKER=kafka:9092
    ```
 
-### 2. Start Services
-
-Using Docker Compose (recommended for development):
-
-```bash
-# Start all services
-docker-compose -f deployments/docker-compose.yml up -d
-
-# Run database migrations
-docker-compose -f deployments/docker-compose.yml run --rm migrate
-
-# View logs
-docker-compose -f deployments/docker-compose.yml logs -f
-```
-
 ### 3. Development Workflow
 
 The project includes a Makefile for common tasks:
@@ -278,11 +263,3 @@ async def listen():
 
 asyncio.get_event_loop().run_until_complete(listen())
 ```
-
-## Contributing
-
-Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
